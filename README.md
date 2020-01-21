@@ -223,6 +223,64 @@ The 4 coordinates, xMin, xMax, yMin, yMax are optional. If not specified, the bo
 }
 ```
 
+### Marker Annotations
+
+Marker annotations make a rhombus shape at the selected point.
+
+You must include the x and y coordinates.
+
+```javascript
+{
+	type: 'marker',
+
+	// optional drawTime to control layering, overrides global drawTime setting
+	drawTime: 'beforeDatasetsDraw',
+
+	// optional annotation ID (must be unique)
+	id: 'a-marker-1',
+
+	// ID of the X scale to bind onto
+	xScaleID: 'x-axis-0',
+
+	// ID of the Y scale to bind onto
+	yScaleID: 'y-axis-0',
+
+	// Value of the marker in the x axis
+	xValue: 25,
+
+	// Value of the marker in the y axis
+	yValue: 15,
+
+	// Size of the marker
+	size: 10,
+
+	// Fill color
+	backgroundColor: 'yellow',
+
+	// Stroke color
+	borderColor: 'rgb(30, 30, 30)',
+
+	// Stroke width
+	borderWidth: 2,
+
+	// Mouse event handlers - be sure to enable the corresponding events in the
+	// annotation events array or the event handler will not be called.
+	// See https://developer.mozilla.org/en-US/docs/Web/Events for a list of
+	// supported mouse events.
+	onMouseenter: function(e) {},
+	onMouseover: function(e) {},
+	onMouseleave: function(e) {},
+	onMouseout: function(e) {},
+	onMousemove: function(e) {},
+	onMousedown: function(e) {},
+	onMouseup: function(e) {},
+	onClick: function(e) {},
+	onDblclick: function(e) {},
+	onContextmenu: function(e) {},
+	onWheel: function(e) {}
+}
+```
+
 ## To-do Items
 
 The following features still need to be done:
